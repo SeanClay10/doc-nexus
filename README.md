@@ -89,15 +89,6 @@ This visualization shows how DocNexus traverses the knowledge graph to assemble 
 - Ollama
 - Streamlit
 
-### Key Python Libraries
-- LangChain
-- langchain-ollama
-- NetworkX
-- Matplotlib
-- PyPDF
-- Streamlit
-
-
 ## Getting Started
 
 ### 1. Clone the Repository
