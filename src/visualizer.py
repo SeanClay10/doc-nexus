@@ -18,7 +18,7 @@ class Visualizer:
         fig, ax = plt.subplots(figsize=(16, 12))
         
         # Generate positions for all nodes
-        pos = nx.spring_layout(traversal_graph, k=1, iterations=50)
+        pos = nx.spring_layout(traversal_graph, weight="weight", k=0.6, iterations=100, seed=42)
         
         # Draw regular edges with color based on weight
         edges = traversal_graph.edges()
