@@ -93,7 +93,7 @@ This visualization shows how DocNexus traverses the knowledge graph to assemble 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/SeanClay10/DocNexus
+git clone https://github.com/SeanClay10/doc-nexus
 cd docnexus
 ```
 
