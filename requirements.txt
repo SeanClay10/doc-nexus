@@ -1,0 +1,32 @@
+# Core Python libraries
+numpy
+scikit-learn
+pydantic
+tqdm
+heapdict
+
+# NLP & embeddings
+nltk
+spacy
+spacy-lookups-data
+sentence-transformers
+langchain
+langchain-core
+langchain-community
+ollama
+langchain-ollama
+faiss-cpu
+huggingface-hub
+transformers
+llama-index
+
+# Streamlit & UI
+streamlit
+streamlit-chat
+
+# Graph / visualization
+networkx
+matplotlib
+
+# File handling
+PyPDF2
