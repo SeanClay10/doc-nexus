@@ -1,0 +1,48 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+    entrypoint: >
+      /bin/sh -c "
+        apt-get update &&
+        apt-get install -y curl &&
+        ollama serve &
+        until curl -s http://localhost:11434/api/version > /dev/null; do
+          echo 'Waiting for Ollama...';
+          sleep 2;
+        done;
+        ollama pull llama3.2:latest;
+        wait
+      "
+
+    # OPTIONAL GPU SUPPORT — uncomment ONLY if you have an NVIDIA GPU
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docnexus
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./src:/app/src
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_models:
