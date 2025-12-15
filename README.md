@@ -1,4 +1,4 @@
-# DocNexus
+# DocNexus 🕸️
 
 ## Purpose
 
@@ -9,7 +9,6 @@ The project emphasizes:
 - Graph-based reasoning instead of pure vector similarity
 - Transparency into how answers are derived
 
----
 
 ## Key Features
 
@@ -26,7 +25,29 @@ The project emphasizes:
 - **Local & private**
   - No external API calls; all processing runs on your machine
 
----
+## UI
+
+<img 
+  src="img/chat-ui.png" 
+  alt="DocNexus Chat Interface" 
+  width="800"
+  style="border:1px solid #ccc; border-radius:6px; padding:4px;"
+/>
+
+The Streamlit UI allows users to upload a PDF and interactively query it using a chat style interface.
+
+
+## Knowledge Graph
+
+<img 
+  src="img/graph-rag.png" 
+  alt="Knowledge Graph Visualization" 
+  width="800"
+  style="border:1px solid #ccc; border-radius:6px; padding:4px;"
+/>
+
+This visualization shows how DocNexus traverses the knowledge graph to assemble context for answering a query.
+
 
 ## Architecture Overview
 
@@ -56,7 +77,6 @@ The project emphasizes:
 6. **Visualization**
    - Traversal path and graph structure are rendered using NetworkX + Matplotlib
 
----
 
 ## Requirements
 
@@ -77,9 +97,8 @@ The project emphasizes:
 - PyPDF
 - Streamlit
 
----
 
-## Getting Started / Workflow
+## Getting Started
 
 ### 1. Clone the Repository
 ```bash
